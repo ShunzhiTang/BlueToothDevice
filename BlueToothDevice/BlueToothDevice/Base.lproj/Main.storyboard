@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-6C-USh">
+                                <rect key="frame" x="175" y="99" width="250" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="eLK-Da-VFS"/>
+                                    <constraint firstAttribute="height" constant="300" id="rkc-sX-6kW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57B-bh-Msq">
+                                <rect key="frame" x="261" y="453" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7IQ-8S-9NG"/>
+                                    <constraint firstAttribute="width" constant="79" id="aBU-3c-FpM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="选择照片">
+                                    <color key="titleColor" red="0.99742907290000005" green="0.26148577039999998" blue="0.77746387299999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="choicePciture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="utO-BL-Tt3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt3-dv-bpv">
+                                <rect key="frame" x="400" y="453" width="79" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="发送照片"/>
+                                <connections>
+                                    <action selector="sendPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUz-OW-MYh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzb-jl-ejD">
+                                <rect key="frame" x="122" y="453" width="79" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="连接设备">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j2J-El-0qx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rzb-jl-ejD" firstAttribute="height" secondItem="57B-bh-Msq" secondAttribute="height" id="6Z6-wK-2aC"/>
+                            <constraint firstItem="Rzb-jl-ejD" firstAttribute="centerY" secondItem="57B-bh-Msq" secondAttribute="centerY" id="BKS-eh-4FU"/>
+                            <constraint firstItem="57B-bh-Msq" firstAttribute="leading" secondItem="Rzb-jl-ejD" secondAttribute="trailing" constant="60" id="Gef-pw-hWH"/>
+                            <constraint firstItem="qt3-dv-bpv" firstAttribute="width" secondItem="57B-bh-Msq" secondAttribute="width" id="HSr-TA-qof"/>
+                            <constraint firstItem="qt3-dv-bpv" firstAttribute="leading" secondItem="57B-bh-Msq" secondAttribute="trailing" constant="60" id="IBU-lf-YV9"/>
+                            <constraint firstItem="57B-bh-Msq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kc6-YL-6mz"/>
+                            <constraint firstItem="Rzb-jl-ejD" firstAttribute="width" secondItem="57B-bh-Msq" secondAttribute="width" id="MEK-4h-dgV"/>
+                            <constraint firstItem="qt3-dv-bpv" firstAttribute="height" secondItem="57B-bh-Msq" secondAttribute="height" id="ZuT-l6-8MS"/>
+                            <constraint firstItem="8ge-6C-USh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gqx-Vh-69c"/>
+                            <constraint firstItem="57B-bh-Msq" firstAttribute="top" secondItem="8ge-6C-USh" secondAttribute="bottom" constant="54" id="jRL-Pf-bKh"/>
+                            <constraint firstItem="qt3-dv-bpv" firstAttribute="centerY" secondItem="57B-bh-Msq" secondAttribute="centerY" id="oOq-T4-gsn"/>
+                            <constraint firstItem="8ge-6C-USh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="79" id="stI-oH-Qgh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="8ge-6C-USh" id="2jj-GM-3Tn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170" y="291"/>
+        </scene>
+    </scenes>
+</document>
