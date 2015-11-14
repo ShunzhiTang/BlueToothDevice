@@ -66,7 +66,15 @@
     [picker dismiss];
 }
 
-
+//接收 二进制数据
+- (void) receiveData:(NSData *)data fromPeer:(NSString *)peer inSession: (GKSession *)session context:(void *)context{
+    //1、转换 image
+    UIImage *image = [UIImage imageWithData:data];
+    
+    //2、设置图像
+    self.imageView.image = image;
+    
+}
 
 
 - (IBAction)choicePciture:(UIButton *)sender {
@@ -99,5 +107,11 @@
 
 
 - (IBAction)sendPicture:(UIButton *)sender {
+    
+    //1、转换成二进制
+    NSData *imageData = UIImageJPEGRepresentation(self.imageView.image, 0.5);
+    
+    //2、发送
+    [self.session sendDataToAllPeers:imageData withDataMode:GKSendDataReliable error:nil];
 }
 @end
